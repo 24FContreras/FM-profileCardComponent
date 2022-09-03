@@ -1,0 +1,117 @@
+//VARIABLES
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: $dark-gray;
+  min-height: 100vh;
+  background-color: $dark-cyan;
+  background-image: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: white;
+  max-width: 20.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .card-header {
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .avatar {
+      background-color: white;
+      border: solid 5px white;
+      border-radius: 50%;
+      margin-top: -48px;
+    }
+
+    h1 {
+      color: $very-dark-desaturated-blue;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: .3rem;
+
+      span {
+        font-weight: 400;
+        color: $dark-gray;
+        margin-left: .5rem;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  .card-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    border-top: solid 1px gainsboro;
+
+    div {
+      flex-grow: 1;
+      text-align: center;
+
+      h2 {
+        color: $very-dark-desaturated-blue;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 10.5px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+footer {
+  color: white;
+  margin-top: 1rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  position: relative;
+  text-shadow: 0px 5px 15px rgba(0, 22, 56, 0.5);
+
+  a {
+    text-decoration: underline dotted;
+    color: #bdfffe;
+    font-weight: 500;
+    transition: color .3s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
